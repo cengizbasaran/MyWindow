@@ -1,0 +1,7 @@
+1- CMake düzenlemeleri yapılacak. : Cemal
+2- ncurses kütüphanesi ile DC içine çizim fonksiyonları eklenecek. : Cemal - Fatih
+3- Keyboard ve Mouse evetlerini dinleyen task yazılacak. : Kemal
+
+4- İsimlendirme önerileri ile isimlendirmeler düzenlenecek. :
+
+https://google.github.io/styleguide/cppguide.html
