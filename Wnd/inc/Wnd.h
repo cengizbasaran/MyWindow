@@ -1,4 +1,6 @@
 
+#include "DC.h"
+
 class Wnd
 {
 public:
