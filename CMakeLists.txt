@@ -8,3 +8,4 @@ include_directories(Wnd/inc DC/ncurses/inc)
 
 file(GLOB SOURCES "Wnd/src/*.cpp" "DC/ncurses/src")
 add_executable(MyWindow ${SOURCES})
+target_link_libraries(MyWindow ncurses)
