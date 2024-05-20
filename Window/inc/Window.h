@@ -1,11 +1,11 @@
 
-#include "DC.h"
+#include "MyWindow.h"
 
 class Wnd
 {
 public:
-    void onPaintBackground(DC dc);
-    void onPaint(DC dc);
+    void onPaintBackground(DeviceContext dc);
+    void onPaint(DeviceContext dc);
 
 
     void onMouseMove(...);

@@ -4,7 +4,7 @@ project(
   MyWindow
   LANGUAGES CXX)
 
-include_directories(Wnd/inc DC/ncurses/inc)
+include_directories(Wnd/inc Utility/inc DeviceContext/ncurses/inc)
 
-file(GLOB SOURCES "Wnd/src/*.cpp" "DC/ncurses/src")
+file(GLOB SOURCES "Wnd/src/*.cpp" "Utility/src" "DeviceContext/ncurses/src")
 add_executable(MyWindow ${SOURCES})
