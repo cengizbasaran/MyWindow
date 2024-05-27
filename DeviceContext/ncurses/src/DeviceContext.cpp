@@ -1,5 +1,6 @@
 
 #include "DeviceContext.h"
+#include "Utility.h"
 
 void DeviceContext::Line(int x1, int y1, int x2, int y2, Color color)
 {
@@ -7,6 +8,21 @@ void DeviceContext::Line(int x1, int y1, int x2, int y2, Color color)
 }
 
 void DeviceContext::Line(Point point, Size size, Color color)
+{
+
+}
+
+void DeviceContext::Rectangle(int x1, int y1, int x2, int y2, Color color)
+{
+
+}
+
+void DeviceContext::Rectangle(Point point, Size size, Color color)
+{
+
+}
+
+void DeviceContext::Rectangle(Rectangle rect, Color color)
 {
 
 }

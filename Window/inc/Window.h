@@ -8,8 +8,8 @@ class Window
 public:
 	//Wnd(int height, int width, int start_y, int start_x) { window = create_window(height, width, start_y, start_x); }
 
-	void onPaintBackground(DC dc);
-	void onPaint(DC dc);
+	void onPaintBackground(DeviceContext dc);
+	void onPaint(DeviceContext dc);
 
 	void onMouseMove(...);
 	void onMouseLeftButtonDown();
@@ -20,6 +20,8 @@ public:
 	void draw_rectangle(int start_x, int start_y, int height, int width);
 	void draw_text(int start_x, int start_y, const char* text);
 	void draw_menu(const char* options[], int num_options);*/
+
+	void setInvalidateRectangle(Rectangle rect);
 
    private:
 	//WINDOW* create_window(int height, int width, int start_y, int start_x);
