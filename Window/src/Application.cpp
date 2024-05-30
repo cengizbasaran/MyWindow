@@ -5,40 +5,67 @@
 
 int main(int argc, char const *argv[])
 {
-    std::cout<<"Hello...\n";
-
     Application app = Application::getInstance();
     app.argc = argc;
     app.argv = argv;
     return app.run();
 }
 
-Application Application::instance = NULL;
+Application *Application::myInstance = nullptr;
 
 
-Application Application::getInstance()
+Application &Application::getInstance()
 {
-    if (insttance == NULL)
-        instance = new Application();
+    if (myInstance == nullptr)
+        myInstance = new Application();
 
-    return instance;
+    return *myInstance;
 }
 
 int Application::run()
 {
     int result;
 
-    Message *msg;
     for (;;)
     {
-        msg = getMessage();
-        result = DispatchMsg(msg);
-        if (result != 0)
+        Message &message = getMessage();
+        dispatchMessage(message);
+        if (message.MessageId == Message::MSG_POST_QUIT)
+        {
+            delete &message;
             break;
+        }
+        delete &message;
     }
 
     return result;
 }
 
+Message &Application::getMessage()
+{
+    return messageQueue.get();
+}
 
+void Application::dispatchMessage(Message &message)
+{
+    switch (message.MessageId)
+    {
+    case Message::MSG_CREATE:
+        message.window.onCreate();
+        break;
+    case Message::MSG_POST_QUIT:
+        message.window.onClose();
+        break;
+    }
+}
+
+void Application::setMouseEvent()
+{
+
+}
+
+void Application::setKeyboardEvent()
+{
+
+}
 

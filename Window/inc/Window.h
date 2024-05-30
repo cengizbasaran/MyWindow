@@ -8,6 +8,8 @@ class Window
 public:
 	//Wnd(int height, int width, int start_y, int start_x) { window = create_window(height, width, start_y, start_x); }
 
+	void onCreate(void);
+	void onClose(void);
 	void onPaintBackground(DeviceContext dc);
 	void onPaint(DeviceContext dc);
 

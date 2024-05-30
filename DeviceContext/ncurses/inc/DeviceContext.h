@@ -19,4 +19,6 @@ public:
     void Text(int x, int y, const char *szStr, Color color);
     void Text(Point point, const char *szStr, Color color);
 
+private:
+    Rectangle invalidateRect;
 };
